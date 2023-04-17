@@ -19,10 +19,32 @@ class _MyLoginState extends State<MyLogin> {
         backgroundColor: Colors.transparent,
         body: Stack(children: [
           Container(
-            padding: const EdgeInsets.only(left: 35, top: 80),
+            padding: const EdgeInsets.only(top: 80),
+            child: Image.asset(
+              'assets/images/logo_schoolscan.png',
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.only(top: 200, left: 80),
             child: const Text(
-              "Welcome\nBack",
-              style: TextStyle(color: Colors.white, fontSize: 33),
+              "Welcome Back",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 33,
+              ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.only(top: 240, left: 40),
+            child: const Text(
+              "Log in to your account to continue",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 20,
+              ),
             ),
           ),
           SingleChildScrollView(
@@ -60,16 +82,8 @@ class _MyLoginState extends State<MyLogin> {
                   height: 40,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    const Text(
-                      'Sign In',
-                      style: TextStyle(
-                        color: Color(0xff4c505b),
-                        fontSize: 27,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: const Color(0xff4c505b),
@@ -96,7 +110,7 @@ class _MyLoginState extends State<MyLogin> {
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontSize: 18,
-                            color: Color(0xff4c505b),
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -107,7 +121,7 @@ class _MyLoginState extends State<MyLogin> {
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontSize: 18,
-                            color: Color(0xff4c505b),
+                            color: Colors.white,
                           ),
                         ),
                       ),

@@ -88,27 +88,17 @@ class _MyRegisterState extends State<MyRegister> {
                 const SizedBox(
                   height: 40,
                 ),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'Sign In',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 27,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundColor: const Color(0xff4c505b),
-                        child: IconButton(
-                          color: Colors.white,
-                          onPressed: () {},
-                          icon: const Icon(Icons.arrow_forward),
-                        ),
-                      ),
-                    ]),
+                Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundColor: const Color(0xff4c505b),
+                    child: IconButton(
+                      color: Colors.white,
+                      onPressed: () {},
+                      icon: const Icon(Icons.arrow_forward),
+                    ),
+                  ),
+                ]),
                 const SizedBox(
                   height: 40,
                 ),
