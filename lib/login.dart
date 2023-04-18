@@ -1,4 +1,7 @@
+import 'package:signup_page/home.dart';
+
 import 'package:flutter/material.dart';
+import 'package:signup_page/dashboard.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -82,50 +85,37 @@ class _MyLoginState extends State<MyLogin> {
                   height: 40,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    TextButton(
+                      onPressed: () {
+                        HeaderWithSearchBox;
+                      },
+                      child: const Text(
+                        'Forgot Password',
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
                     CircleAvatar(
                       radius: 30,
                       backgroundColor: const Color(0xff4c505b),
                       child: IconButton(
-                        color: Colors.white,
-                        onPressed: () {},
-                        icon: const Icon(Icons.arrow_forward),
-                      ),
+                          icon: const Icon(Icons.arrow_forward),
+                          color: Colors.white,
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => HomeScreen()));
+                          }),
                     ),
                   ],
                 ),
                 const SizedBox(
                   height: 40,
                 ),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, 'register');
-                        },
-                        child: const Text(
-                          'Sign Up',
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            fontSize: 18,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          'Forgot Password',
-                          style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            fontSize: 18,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ]),
               ]),
             ),
           ),
