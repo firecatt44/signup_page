@@ -1,5 +1,4 @@
 import 'package:signup_page/home.dart';
-
 import 'package:flutter/material.dart';
 import 'package:signup_page/dashboard.dart';
 
